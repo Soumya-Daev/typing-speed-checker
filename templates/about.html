@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block myStyles %}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+    .btn-danger:hover{
+        box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+                0 2px 4px rgba(0,0,0,0.07), 
+                0 4px 8px rgba(0,0,0,0.07), 
+                0 8px 16px rgba(0,0,0,0.07),
+                0 16px 32px rgba(0,0,0,0.07), 
+                0 32px 64px rgba(0,0,0,0.07); 
+    }
+</style>
+{% endblock myStyles %}
+
+{% block title %}About{% endblock title %}
+
+{% block about %}active{% endblock about %}
+
+{% block myBody %}
+    <!-- Body  -->
+    <div class="container container-about" style="margin-top: 30px; margin-bottom: 30px; font-family: 'Redressed', cursive;">
+        <div class ="card mb-3 text-center" style="justify-self: center; background: antiquewhite; border-radius: 20px; box-shadow: 20px 20px 20px 10px rgba(0, 0, 0, 0.2);">
+            <img src= "{{ url_for('static', filename='man.png') }}" className="card-img-top smallimg" alt="Soumyadev Saha" style= "width: 100%;
+            height: 15vw;
+            object-fit : contain;
+            margin-top : 10px"/>
+            <hr />
+            <div class ="card-body">
+                <h4 class ="card-title"><b style="font-family: 'Redressed', cursive;">Soumyadev Saha</b></h4>
+                <b><p class ="card-text" style="font-family: 'Redressed', cursive;">I am an undergraduate student pursuing Computer Science and Engineering at Jadavpur University, Kolkata - 700032.<br/>This web app checks user's typing speed and accuracy perfectly, test your typing skills now !<br>It is made with HTML, CSS, vanilla JS (no external libraries) and python's flask library.</p>
+                <small class ="text-muted" style="font-family: 'Redressed', cursive;">Whatsapp : 6295696944 <br/>Email : soumyadev1912@gmail.com</small></b><br/><br/>
+                <a href="https://soumyadev-portfolio-1.netlify.app/" target="_blank" rel="noreferrer" class ="btn btn-danger" style="font-family: 'Redressed', cursive;">My Portfolio</a>
+            </div>
+            </div>
+    </div>
+{% endblock myBody %}
